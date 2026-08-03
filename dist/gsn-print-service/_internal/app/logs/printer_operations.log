@@ -1,0 +1,23 @@
+2026-08-03T00:21:47.253351 | action=print | printer=Fake Printer | result=success | payload=TEST | error=
+2026-08-03T00:42:08.943669 | action=print | printer=Fake Printer | result=success | payload=TEST | error=
+2026-08-03T00:47:57.724084 | action=print | printer=Fake Printer | result=success | payload=TEST | error=
+2026-08-03T00:48:16.459520 | action=print | printer=Fake Printer | result=success | payload=TEST | error=
+2026-08-03T00:48:48.237669 | action=print | printer=Fake Printer | result=success | payload=TEST | error=
+2026-08-03T02:08:55Z | action=job | printer=Argox OS-214 Plus | result=success | payload=n
+q 400
+Q 200,26
+B 10,8,0,1,2,5,70,B,"TEST-001"
+A 10,88,0,2,1,1,N,"SKU: TEST-001"
+A 10,108,0,2,1,1,N,"Peca Teste"
+A 10,128,0,2,1,1,N,"Loc: A1 | Usado"
+P 1
+ | error=
+2026-08-03T02:37:12Z | action=job | printer=Argox OS-214 Plus | result=success | payload=n
+q 400
+Q 200,26
+B 10,8,0,1,2,5,70,B,"TEST-001"
+A 10,88,0,2,1,1,N,"SKU: TEST-001"
+A 10,108,0,2,1,1,N,"Peca Teste"
+A 10,128,0,2,1,1,N,"Loc: A1 | Usado"
+P 1
+ | error=

@@ -22,8 +22,12 @@ class PrintJob:
     printer_name: str = ""
     template: str = "default"
     payload: dict[str, Any] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
     copies: int = 1
     status: JobStatus = JobStatus.PENDING
+    remote_message_id: str | None = None
+    external_job_id: str | None = None
+    company_id: str | None = None
     created_at: str = ""
     updated_at: str = ""
     error: str | None = None

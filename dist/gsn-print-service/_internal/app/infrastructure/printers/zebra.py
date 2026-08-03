@@ -4,8 +4,5 @@ from app.infrastructure.printers.base import BasePrinter
 
 
 class ZebraPrinter(BasePrinter):
-    def __init__(self, name: str) -> None:
-        super().__init__(name)
-
-    def print(self, job: object) -> None:
-        return None
+    def __init__(self, name: str, mock: bool = False) -> None:
+        super().__init__(name, mock=mock)

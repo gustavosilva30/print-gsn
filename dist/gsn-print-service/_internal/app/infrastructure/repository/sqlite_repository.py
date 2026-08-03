@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,13 +24,26 @@ class SQLiteJobRepository:
                     printer_name TEXT NOT NULL,
                     template TEXT NOT NULL,
                     payload TEXT NOT NULL,
+                    metadata TEXT NOT NULL DEFAULT '{}',
                     copies INTEGER NOT NULL,
                     status TEXT NOT NULL,
+                    remote_message_id TEXT,
+                    external_job_id TEXT,
+                    company_id TEXT,
                     created_at TEXT NOT NULL,
                     updated_at TEXT NOT NULL,
                     error TEXT
                 )
                 """
+            )
+            self._ensure_columns(
+                conn,
+                {
+                    "metadata": "TEXT NOT NULL DEFAULT '{}'",
+                    "remote_message_id": "TEXT",
+                    "external_job_id": "TEXT",
+                    "company_id": "TEXT",
+                },
             )
             conn.commit()
 
@@ -41,16 +55,34 @@ class SQLiteJobRepository:
         with sqlite3.connect(self._db_path) as conn:
             conn.execute(
                 """
-                INSERT INTO jobs (id, printer_name, template, payload, copies, status, created_at, updated_at, error)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO jobs (
+                    id,
+                    printer_name,
+                    template,
+                    payload,
+                    metadata,
+                    copies,
+                    status,
+                    remote_message_id,
+                    external_job_id,
+                    company_id,
+                    created_at,
+                    updated_at,
+                    error
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     job.id,
                     job.printer_name,
                     job.template,
-                    str(job.payload),
+                    json.dumps(job.payload, ensure_ascii=True),
+                    json.dumps(job.metadata, ensure_ascii=True),
                     job.copies,
                     job.status.value,
+                    job.remote_message_id,
+                    job.external_job_id,
+                    job.company_id,
                     job.created_at,
                     job.updated_at,
                     job.error,
@@ -61,10 +93,36 @@ class SQLiteJobRepository:
     def list_by_status(self, status: JobStatus) -> list[PrintJob]:
         with sqlite3.connect(self._db_path) as conn:
             rows = conn.execute(
-                "SELECT id, printer_name, template, payload, copies, status, created_at, updated_at, error FROM jobs WHERE status = ?",
+                """
+                SELECT
+                    id,
+                    printer_name,
+                    template,
+                    payload,
+                    metadata,
+                    copies,
+                    status,
+                    remote_message_id,
+                    external_job_id,
+                    company_id,
+                    created_at,
+                    updated_at,
+                    error
+                FROM jobs
+                WHERE status = ?
+                """,
                 (status.value,),
             ).fetchall()
         return [self._row_to_job(row) for row in rows]
+
+    def get_by_id(self, job_id: str) -> PrintJob | None:
+        return self._fetch_one("SELECT * FROM jobs WHERE id = ?", (job_id,))
+
+    def get_by_remote_message_id(self, remote_message_id: str) -> PrintJob | None:
+        return self._fetch_one("SELECT * FROM jobs WHERE remote_message_id = ?", (remote_message_id,))
+
+    def get_by_external_job_id(self, external_job_id: str) -> PrintJob | None:
+        return self._fetch_one("SELECT * FROM jobs WHERE external_job_id = ?", (external_job_id,))
 
     def update_status(self, job_id: str, status: JobStatus, error: str | None = None) -> None:
         now = datetime.now(timezone.utc).isoformat()
@@ -75,15 +133,67 @@ class SQLiteJobRepository:
             )
             conn.commit()
 
+    def _fetch_one(self, query: str, params: tuple[Any, ...]) -> PrintJob | None:
+        with sqlite3.connect(self._db_path) as conn:
+            row = conn.execute(query, params).fetchone()
+        if row is None:
+            return None
+        return self._row_to_job(row)
+
+    def _ensure_columns(self, conn: sqlite3.Connection, columns: dict[str, str]) -> None:
+        existing_columns = {
+            row[1]
+            for row in conn.execute("PRAGMA table_info(jobs)").fetchall()
+        }
+        for column_name, column_definition in columns.items():
+            if column_name in existing_columns:
+                continue
+            conn.execute(f"ALTER TABLE jobs ADD COLUMN {column_name} {column_definition}")
+
     def _row_to_job(self, row: tuple[Any, ...]) -> PrintJob:
+        normalized_row = row
+        if len(row) == 9:
+            normalized_row = (
+                row[0],
+                row[1],
+                row[2],
+                row[3],
+                "{}",
+                row[4],
+                row[5],
+                None,
+                None,
+                None,
+                row[6],
+                row[7],
+                row[8],
+            )
         return PrintJob(
-            id=row[0],
-            printer_name=row[1],
-            template=row[2],
-            payload={"value": row[3]},
-            copies=row[4],
-            status=JobStatus(row[5]),
-            created_at=row[6],
-            updated_at=row[7],
-            error=row[8],
+            id=normalized_row[0],
+            printer_name=normalized_row[1],
+            template=normalized_row[2],
+            payload=self._loads_json(normalized_row[3]),
+            metadata=self._loads_json(normalized_row[4]),
+            copies=normalized_row[5],
+            status=JobStatus(normalized_row[6]),
+            remote_message_id=normalized_row[7],
+            external_job_id=normalized_row[8],
+            company_id=normalized_row[9],
+            created_at=normalized_row[10],
+            updated_at=normalized_row[11],
+            error=normalized_row[12],
         )
+
+    def _loads_json(self, raw_value: Any) -> dict[str, Any]:
+        if isinstance(raw_value, dict):
+            return raw_value
+        if raw_value in (None, ""):
+            return {}
+        if isinstance(raw_value, str):
+            try:
+                loaded = json.loads(raw_value)
+            except json.JSONDecodeError:
+                return {"value": raw_value}
+            if isinstance(loaded, dict):
+                return loaded
+        return {"value": raw_value}
