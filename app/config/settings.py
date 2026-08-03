@@ -26,6 +26,10 @@ class Settings:
     service_version: str = os.getenv("GSN_SERVICE_VERSION", "0.1.0")
     debug: bool = os.getenv("GSN_DEBUG", "true").lower() == "true"
     mock_mode: bool = os.getenv("GSN_MOCK_MODE", "true").lower() == "true"
+    enable_tray: bool = os.getenv("GSN_ENABLE_TRAY", "false").lower() == "true"
+    local_http_enabled: bool = os.getenv("GSN_LOCAL_HTTP", "true").lower() == "true"
+    local_http_host: str = os.getenv("GSN_LOCAL_HTTP_HOST", "0.0.0.0")
+    local_http_port: int = int(os.getenv("GSN_LOCAL_HTTP_PORT", "5555"))
     base_dir: Path = Path(__file__).resolve().parents[1]
     default_printer: str = ""
     printer_type: str = "Argox"
@@ -33,6 +37,11 @@ class Settings:
     copies: int = 1
     paper_width: int = 80
     paper_height: int = 50
+    command_language: str = "PPLB"
+    argox_model: str = "OS-214 Plus"
+    argox_dpi: int = 203
+    argox_darkness: int = 10
+    argox_speed: int = 3
 
     def __post_init__(self) -> None:
         self.base_dir.mkdir(parents=True, exist_ok=True)
@@ -47,6 +56,11 @@ class Settings:
             self.copies = int(data.get("copies", self.copies))
             self.paper_width = int(data.get("paper_width", self.paper_width))
             self.paper_height = int(data.get("paper_height", self.paper_height))
+            self.command_language = str(data.get("command_language", self.command_language))
+            self.argox_model = str(data.get("argox_model", self.argox_model))
+            self.argox_dpi = int(data.get("argox_dpi", self.argox_dpi))
+            self.argox_darkness = int(data.get("argox_darkness", self.argox_darkness))
+            self.argox_speed = int(data.get("argox_speed", self.argox_speed))
             self.server_url = str(data.get("server_url", self.server_url))
             self.token = str(data.get("token", self.token))
             self.protocol_version = str(data.get("protocol_version", self.protocol_version))
@@ -70,6 +84,10 @@ class Settings:
             self.service_version = str(data.get("service_version", self.service_version))
             self.debug = self._as_bool(data.get("debug", self.debug))
             self.mock_mode = self._as_bool(data.get("mock_mode", self.mock_mode))
+            self.enable_tray = self._as_bool(data.get("enable_tray", self.enable_tray))
+            self.local_http_enabled = self._as_bool(data.get("local_http_enabled", self.local_http_enabled))
+            self.local_http_host = str(data.get("local_http_host", self.local_http_host))
+            self.local_http_port = int(data.get("local_http_port", self.local_http_port))
         if not self.computer_id:
             self.computer_id = str(uuid4())
             self._save_config(config_path, data)
@@ -84,6 +102,11 @@ class Settings:
                 "copies": self.copies,
                 "paper_width": self.paper_width,
                 "paper_height": self.paper_height,
+                "command_language": self.command_language,
+                "argox_model": self.argox_model,
+                "argox_dpi": self.argox_dpi,
+                "argox_darkness": self.argox_darkness,
+                "argox_speed": self.argox_speed,
                 "server_url": self.server_url,
                 "token": self.token,
                 "protocol_version": self.protocol_version,
@@ -101,6 +124,10 @@ class Settings:
                 "service_version": self.service_version,
                 "debug": self.debug,
                 "mock_mode": self.mock_mode,
+                "enable_tray": self.enable_tray,
+                "local_http_enabled": self.local_http_enabled,
+                "local_http_host": self.local_http_host,
+                "local_http_port": self.local_http_port,
             }
         )
         config_path.parent.mkdir(parents=True, exist_ok=True)

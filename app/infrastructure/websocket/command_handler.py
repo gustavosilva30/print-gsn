@@ -33,12 +33,17 @@ class PrintCommandHandler:
             if existing is not None:
                 logger.info("Duplicate remote message {remote_id}, existing job {job_id}", remote_id=envelope.id, job_id=existing.id)
                 return None
-        printer_name = str(payload.get("printer", self._settings.default_printer))
+        printer_name = str(
+            payload.get("printer_name")
+            or payload.get("printer")
+            or self._settings.default_printer
+            or ""
+        )
         template = str(payload.get("template", "default"))
-        data = payload.get("data") or payload.get("payload")
+        data = payload.get("content") or payload.get("data") or payload.get("payload")
         if not isinstance(data, dict):
             data = {}
-        copies = max(1, int(payload.get("copies", 1)))
+        copies = max(1, int(payload.get("copies", self._settings.copies or 1)))
         external_job_id = str(payload.get("external_job_id", "")) or None
         job = PrintJob(
             printer_name=printer_name,

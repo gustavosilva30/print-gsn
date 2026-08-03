@@ -60,7 +60,7 @@ def test_print_manager_print_test_uses_selected_printer(monkeypatch: pytest.Monk
     printer = PrinterInfo(name="Fake Printer", driver="Argox", is_default=True, type="Argox")
 
     monkeypatch.setattr(PrinterManager, "list_printers", lambda self: [printer])
-    monkeypatch.setattr(PrinterManager, "create_driver", lambda self, selected_printer: fake_driver)
+    monkeypatch.setattr(PrinterManager, "create_driver", lambda self, selected_printer, mock=False: fake_driver)
 
     result = manager.print_test(printer_name="Fake Printer")
 

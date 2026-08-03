@@ -21,6 +21,7 @@ from app.infrastructure.websocket.dispatcher import MessageDispatcher
 from app.infrastructure.websocket.messages import ProtocolEnvelope
 from app.services.print_manager import PrinterManager
 from app.services.print_service import PrintService
+from app.infrastructure.local_http.print_bridge import CRMPrintBridge
 
 
 class ApplicationContainer:
@@ -43,26 +44,33 @@ class ApplicationContainer:
         job_service = JobService(repository)
         self._registry.register_instance(JobService, job_service)
 
-        printer_manager = PrinterManager()
+        printer_manager = PrinterManager(base_dir=self._settings.base_dir)
+        if self._settings.default_printer:
+            printer_manager.default_printer_name = self._settings.default_printer
         self._registry.register_instance(PrinterManager, printer_manager)
 
-        print_service = PrintService(job_service, stop_event=self._stop_event)
-        self._registry.register_instance(PrintService, print_service)
-
         # ------------------------------------------------------------------
-        # WebSocket plumbing
+        # WebSocket plumbing (send_callback shared with PrintService)
         # ------------------------------------------------------------------
         send_queue: queue.Queue[ProtocolEnvelope | None] = queue.Queue()
 
         dispatcher = MessageDispatcher()
 
-        # Lazy send callback — resolved after WebSocketClient is created
         _send_ref: list[WebSocketClient | None] = [None]
 
         def _send_callback(envelope: ProtocolEnvelope) -> None:
             client = _send_ref[0]
             if client is not None:
                 client.send_envelope(envelope)
+
+        print_service = PrintService(
+            job_service=job_service,
+            printer_manager=printer_manager,
+            settings=self._settings,
+            stop_event=self._stop_event,
+            send_callback=_send_callback,
+        )
+        self._registry.register_instance(PrintService, print_service)
 
         dispatcher.register(
             "print",
@@ -121,9 +129,21 @@ class ApplicationContainer:
         print_service.start()
         websocket_client.connect()
 
+        local_http = None
+        if getattr(self._settings, "local_http_enabled", True):
+            local_http = CRMPrintBridge(
+                settings=self._settings,
+                printer_manager=printer_manager,
+                on_job=job_service.enqueue,
+            )
+            local_http.start()
+            self._registry.register_instance(CRMPrintBridge, local_http)
+
         self._services = SimpleNamespace(
             print_service=print_service,
             websocket_client=websocket_client,
             printer_manager=printer_manager,
+            job_service=job_service,
+            local_http=local_http,
         )
         return self._services

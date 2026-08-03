@@ -38,3 +38,32 @@ Windows:
 build.bat
 release.bat
 ```
+
+## Modos de execução
+
+```bash
+# Bandeja do sistema (recomendado no desktop)
+python -m app.main --tray
+
+# Processo em foreground
+python -m app.main --headless
+
+# Windows Service (executar como Administrador)
+python -m app.main --install-service
+python -m app.main --start-service
+python -m app.main --stop-service
+python -m app.main --uninstall-service
+```
+
+## Homologação rápida (sem impressora)
+
+```bash
+# Terminal 1
+python tools/mock_websocket_server.py --auto-print
+
+# Terminal 2
+python -m app.main --tray
+```
+
+Veja o guia completo em [DEPLOY.md](DEPLOY.md).
+

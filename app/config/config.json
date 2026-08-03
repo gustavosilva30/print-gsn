@@ -1,11 +1,11 @@
 {
-  "default_printer": "",
+  "default_printer": "Argox OS-214 Plus",
   "printer_type": "Argox",
   "label_language": "PT-BR",
   "copies": 1,
-  "paper_width": 80,
-  "paper_height": 50,
-  "server_url": "wss://localhost",
+  "paper_width": 50,
+  "paper_height": 25,
+  "server_url": "ws://127.0.0.1:8765",
   "token": "demo-token",
   "protocol_version": "1.0",
   "company_id": "default-company",
@@ -21,5 +21,14 @@
   "max_pending_outbound_messages": 1000,
   "service_version": "0.1.0",
   "debug": true,
-  "mock_mode": true
+  "mock_mode": true,
+  "command_language": "PPLB",
+  "argox_model": "OS-214 Plus",
+  "argox_dpi": 203,
+  "argox_darkness": 10,
+  "argox_speed": 3,
+  "enable_tray": true,
+  "local_http_enabled": true,
+  "local_http_host": "0.0.0.0",
+  "local_http_port": 5555
 }

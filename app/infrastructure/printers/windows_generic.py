@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import platform
 
 from app.infrastructure.printers.base import BasePrinter
@@ -11,19 +10,23 @@ class WindowsGenericPrinter(BasePrinter):
         super().__init__(name, mock=mock)
 
     def print_raw(self, payload: bytes) -> None:
+        if not payload:
+            raise ValueError("No payload provided")
+        if self._mock:
+            self._payloads.append(payload)
+            self._save_mock_payload(payload)
+            return
         if platform.system() != "Windows":
+            self._payloads.append(payload)
+            self._save_mock_payload(payload)
             return
         try:
             import win32print
-            import win32ui
-        except Exception:  # noqa: BLE001
-            return
-        if not payload:
-            raise ValueError("No payload provided")
-        printer_name = self.name
-        hprinter = win32print.OpenPrinter(printer_name)
+        except Exception as exc:  # noqa: BLE001
+            raise RuntimeError(f"win32print is not available: {exc}") from exc
+        hprinter = win32print.OpenPrinter(self.name)
         try:
-            hjob = win32print.StartDocPrinter(hprinter, 1, ("GSN Print", None, "RAW"))
+            win32print.StartDocPrinter(hprinter, 1, ("GSN Print", None, "RAW"))
             win32print.StartPagePrinter(hprinter)
             win32print.WritePrinter(hprinter, payload)
             win32print.EndPagePrinter(hprinter)
