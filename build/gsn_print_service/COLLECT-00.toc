@@ -1,0 +1,398 @@
+([('MSVCP140.dll', 'C:\\WINDOWS\\system32\\MSVCP140.dll', 'BINARY'),
+  ('PIL\\_avif.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_avif.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imaging.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_imaging.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingft.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_imagingft.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_webp.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PIL\\_webp.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('_asyncio.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_sqlite3.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_sqlite3.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_uuid.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('_wmi.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_wmi.pyd',
+   'EXTENSION'),
+  ('_zstd.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_zstd.pyd',
+   'EXTENSION'),
+  ('app\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print gsn\\app\\__init__.py',
+   'DATA'),
+  ('app\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\api\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\api\\__init__.py',
+   'DATA'),
+  ('app\\api\\routes.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\api\\routes.py',
+   'DATA'),
+  ('app\\application\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\__init__.py',
+   'DATA'),
+  ('app\\application\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\application\\services\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\services\\__init__.py',
+   'DATA'),
+  ('app\\application\\services\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\services\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\application\\services\\__pycache__\\job_service.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\services\\__pycache__\\job_service.cpython-314.pyc',
+   'DATA'),
+  ('app\\application\\services\\job_service.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\application\\services\\job_service.py',
+   'DATA'),
+  ('app\\config\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\config\\__init__.py',
+   'DATA'),
+  ('app\\config\\settings.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\config\\settings.py',
+   'DATA'),
+  ('app\\core\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\core\\__init__.py',
+   'DATA'),
+  ('app\\core\\logging.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\core\\logging.py',
+   'DATA'),
+  ('app\\database\\README.md',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\database\\README.md',
+   'DATA'),
+  ('app\\domain\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\__init__.py',
+   'DATA'),
+  ('app\\domain\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\domain\\__pycache__\\job.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\__pycache__\\job.cpython-314.pyc',
+   'DATA'),
+  ('app\\domain\\__pycache__\\printer.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\__pycache__\\printer.cpython-314.pyc',
+   'DATA'),
+  ('app\\domain\\__pycache__\\template.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\__pycache__\\template.cpython-314.pyc',
+   'DATA'),
+  ('app\\domain\\job.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\job.py',
+   'DATA'),
+  ('app\\domain\\printer.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\printer.py',
+   'DATA'),
+  ('app\\domain\\template.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\domain\\template.py',
+   'DATA'),
+  ('app\\events\\dispatcher.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\events\\dispatcher.py',
+   'DATA'),
+  ('app\\infrastructure\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\__init__.py',
+   'DATA'),
+  ('app\\infrastructure\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\infrastructure\\bootstrap.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\bootstrap.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\__init__.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\infrastructure\\printers\\__pycache__\\discovery.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\__pycache__\\discovery.cpython-314.pyc',
+   'DATA'),
+  ('app\\infrastructure\\printers\\argox.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\argox.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\base.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\base.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\brother.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\brother.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\discovery.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\discovery.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\elgin.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\elgin.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\pdf.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\pdf.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\registry.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\registry.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\windows_generic.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\windows_generic.py',
+   'DATA'),
+  ('app\\infrastructure\\printers\\zebra.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\printers\\zebra.py',
+   'DATA'),
+  ('app\\infrastructure\\repository\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\repository\\__init__.py',
+   'DATA'),
+  ('app\\infrastructure\\repository\\__pycache__\\__init__.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\repository\\__pycache__\\__init__.cpython-314.pyc',
+   'DATA'),
+  ('app\\infrastructure\\repository\\__pycache__\\sqlite_repository.cpython-314.pyc',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\repository\\__pycache__\\sqlite_repository.cpython-314.pyc',
+   'DATA'),
+  ('app\\infrastructure\\repository\\sqlite_repository.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\repository\\sqlite_repository.py',
+   'DATA'),
+  ('app\\infrastructure\\updater\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\updater\\__init__.py',
+   'DATA'),
+  ('app\\infrastructure\\updater\\update_service.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\updater\\update_service.py',
+   'DATA'),
+  ('app\\infrastructure\\websocket\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\websocket\\__init__.py',
+   'DATA'),
+  ('app\\infrastructure\\websocket\\client.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\infrastructure\\websocket\\client.py',
+   'DATA'),
+  ('app\\logs\\README.md',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\logs\\README.md',
+   'DATA'),
+  ('app\\main.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print gsn\\app\\main.py',
+   'DATA'),
+  ('app\\models\\event.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\models\\event.py',
+   'DATA'),
+  ('app\\services\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\services\\__init__.py',
+   'DATA'),
+  ('app\\services\\print_service.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\services\\print_service.py',
+   'DATA'),
+  ('app\\ui\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\ui\\__init__.py',
+   'DATA'),
+  ('app\\ui\\tray\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\ui\\tray\\__init__.py',
+   'DATA'),
+  ('app\\ui\\tray\\tray.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\ui\\tray\\tray.py',
+   'DATA'),
+  ('app\\ui\\windows\\__init__.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\ui\\windows\\__init__.py',
+   'DATA'),
+  ('app\\ui\\windows\\settings_window.py',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\app\\ui\\windows\\settings_window.py',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\base_library.zip',
+   'DATA'),
+  ('greenlet\\_greenlet.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\greenlet\\_greenlet.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('gsn-print-service.exe',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\gsn-print-service.exe',
+   'EXECUTABLE'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('pyexpat.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('python314.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\python314.dll',
+   'BINARY'),
+  ('select.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
+   'DATA'),
+  ('sqlalchemy\\cyextension\\collections.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\sqlalchemy\\cyextension\\collections.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\immutabledict.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\sqlalchemy\\cyextension\\immutabledict.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\processors.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\sqlalchemy\\cyextension\\processors.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\resultproxy.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\sqlalchemy\\cyextension\\resultproxy.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlalchemy\\cyextension\\util.cp314-win_amd64.pyd',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\sqlalchemy\\cyextension\\util.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('sqlite3.dll',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\sqlite3.dll',
+   'BINARY'),
+  ('unicodedata.pyd',
+   'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\unicodedata.pyd',
+   'EXTENSION')],)

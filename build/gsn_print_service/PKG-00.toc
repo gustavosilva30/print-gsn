@@ -1,0 +1,67 @@
+('C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+ 'gsn\\build\\gsn_print_service\\gsn-print-service.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\build\\gsn_print_service\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print '
+   'gsn\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('main',
+   'C:\\Users\\pecas\\OneDrive\\Área de Trabalho\\print gsn\\app\\main.py',
+   'PYSOURCE')],
+ 'python314.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
