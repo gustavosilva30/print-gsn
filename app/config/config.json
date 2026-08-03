@@ -14,7 +14,7 @@
   "heartbeat_interval_seconds": 30,
   "connect_timeout_seconds": 5,
   "read_timeout_seconds": 2,
-  "auto_reconnect": true,
+  "auto_reconnect": false,
   "reconnect_initial_delay_seconds": 1,
   "reconnect_max_delay_seconds": 30,
   "reconnect_multiplier": 2.0,
@@ -30,5 +30,6 @@
   "enable_tray": true,
   "local_http_enabled": true,
   "local_http_host": "0.0.0.0",
-  "local_http_port": 5555
+  "local_http_port": 5555,
+  "websocket_enabled": false
 }

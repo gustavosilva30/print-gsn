@@ -55,6 +55,7 @@ class SystemTray:
             MenuItem("Status", self._show_status, default=True),
             MenuItem("Testar impressão", self._print_test),
             MenuItem("Configurações", self._open_settings),
+            MenuItem("Guia de configuração", self._open_guide),
             Menu.SEPARATOR,
             MenuItem("Sair", self._on_exit),
         )

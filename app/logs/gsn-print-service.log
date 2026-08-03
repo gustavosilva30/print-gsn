@@ -21974,3 +21974,2460 @@ Traceback (most recent call last):
 
 ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
 2026-08-02 22:10:30.468 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:10:55.499 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77610>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77610>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD1F0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD1F0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:10:55.501 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:11:05.625 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D810>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D810>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEBA5A6A50>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEBA5A6A50>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:11:05.628 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:11:29.588 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77570>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77570>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD370>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD370>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:11:29.590 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:11:39.668 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE90916850>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE90916850>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7E90>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7E90>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:11:39.670 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:12:03.645 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77750>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77750>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD4F0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD4F0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:12:03.647 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:12:13.715 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473CF0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473CF0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7D10>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7D10>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:12:13.717 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:12:37.712 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE776B0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE776B0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD670>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD670>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:12:37.714 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:12:47.765 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473F70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473F70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7B90>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7B90>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:12:47.767 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:13:11.759 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77890>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77890>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD7F0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD7F0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:13:11.761 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:13:21.845 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE944739D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE944739D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7A10>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7A10>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:13:21.847 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:13:45.824 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE777F0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE777F0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFD970>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFD970>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:13:45.826 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:13:55.911 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473A70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473A70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7890>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7890>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:13:55.913 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:14:19.871 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE779D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE779D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFDAF0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFDAF0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:14:19.874 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:14:29.992 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7410>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7410>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:14:29.995 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:14:53.906 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77930>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77930>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFDC70>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFDC70>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:14:53.909 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:15:04.043 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473ED0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473ED0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7710>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7710>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:15:04.045 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:15:27.937 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77B10>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77B10>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFDDF0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFDDF0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:15:27.940 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:15:38.074 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473930>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473930>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7590>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7590>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:15:38.077 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:16:02.000 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77A70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77A70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFDF70>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFDF70>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:16:02.003 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:16:12.139 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473E30>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473E30>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7290>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7290>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:16:12.141 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:16:36.067 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77C50>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77C50>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFE0F0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFE0F0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:16:36.070 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:16:46.204 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473B10>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473B10>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A7110>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A7110>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:16:46.207 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:17:10.115 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFE270>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFE270>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:17:10.117 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:17:20.283 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473C50>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473C50>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6F90>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6F90>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:17:20.285 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:17:44.750 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x000002958AE77D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002958AE77D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x00000295A2DFE3F0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x00000295A2DFE3F0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:17:44.752 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:17:54.356 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BE94473BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BE94473BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6E10>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6E10>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:17:54.359 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:18:18.795 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295F8136850>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295F8136850>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E07E30>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E07E30>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:18:18.797 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:18:28.401 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D770>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D770>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6C90>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6C90>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:18:28.405 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:18:52.855 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3F70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3F70>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E07CB0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E07CB0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:18:52.857 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:19:02.449 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D590>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D590>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6B10>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6B10>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:19:02.451 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:19:26.926 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3E30>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3E30>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E07B30>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E07B30>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:19:26.928 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:19:36.496 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D950>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D950>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6990>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6990>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:19:36.499 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:20:00.975 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3CF0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3CF0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E079B0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E079B0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:20:00.977 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:20:10.529 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D630>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D630>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6810>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6810>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:20:10.532 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:20:35.013 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3ED0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3ED0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E07830>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E07830>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:20:35.016 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:20:44.594 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D6D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D6D0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6690>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6690>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:20:44.597 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:21:09.082 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3BB0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E073B0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E073B0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:21:09.086 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:21:18.660 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x000002BE90F0EB90>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x000002BE90F0E820>
+    │    │        │   └ <Thread(ws-client, started 17808)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x000002BE943EAD80>
+    └ <Thread(ws-client, started 17808)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 17808)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 17808)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>>
+    └ <Thread(ws-client, started 17808)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x000002BE94413060>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x000002BE943D57F0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x000002BE943E1850>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x000002BE943E0300>
+    └ <websocket._core.WebSocket object at 0x000002BEB463D310>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x000002BE943CD6F0>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x000002BEB463D310>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x000002BEAE5A6510>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x000002BEAE5A6510>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x000002BE943CD900>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:21:18.662 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s
+2026-08-02 22:21:43.120 | ERROR    | app.infrastructure.websocket.client:_run:98 - WebSocket connection error: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Traceback (most recent call last):
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x00000295F872EB90>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    │    │        │   │    └ <function Thread.run at 0x00000295F872E820>
+    │    │        │   └ <Thread(ws-client, started 8464)>
+    │    │        └ <method 'run' of '_contextvars.Context' objects>
+    │    └ <_contextvars.Context object at 0x00000295FBC6FDC0>
+    └ <Thread(ws-client, started 8464)>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(ws-client, started 8464)>
+    │    │        │    └ ()
+    │    │        └ <Thread(ws-client, started 8464)>
+    │    └ <bound method WebSocketClient._run of <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>>
+    └ <Thread(ws-client, started 8464)>
+
+> File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 96, in _run
+    self._connect_and_serve()
+    │    └ <function WebSocketClient._connect_and_serve at 0x00000295FBC26B90>
+    └ <app.infrastructure.websocket.client.WebSocketClient object at 0x00000295FBC196A0>
+
+  File "C:\Users\pecas\OneDrive\Área de Trabalho\print gsn\app\infrastructure\websocket\client.py", line 110, in _connect_and_serve
+    ws = websocket.create_connection(
+         │         └ <function create_connection at 0x00000295FBC096F0>
+         └ <module 'websocket' from 'C:\\Users\\pecas\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\websocket\\__init...
+
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 664, in create_connection
+    websock.connect(url, **options)
+    │       │       │      └ {}
+    │       │       └ 'wss://localhost'
+    │       └ <function WebSocket.connect at 0x00000295FBC081A0>
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_core.py", line 263, in connect
+    self.sock, addrs = connect(
+    │    │             └ <function connect at 0x00000295FBBFD590>
+    │    └ None
+    └ <websocket._core.WebSocket object at 0x00000295FBCE3D90>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 146, in connect
+    sock = _open_socket(addrinfo_list, options.sockopt, options.timeout)
+           │            │              │       │        │       └ 5
+           │            │              │       │        └ <websocket._socket.sock_opt object at 0x0000029596E076B0>
+           │            │              │       └ []
+           │            │              └ <websocket._socket.sock_opt object at 0x0000029596E076B0>
+           │            └ [(<AddressFamily.AF_INET6: 23>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('::1', 443, 0, 0)), (<AddressFamily.AF_INET: 2>, <Socket...
+           └ <function _open_socket at 0x00000295FBBFD7A0>
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 233, in _open_socket
+    raise err
+          └ ConnectionRefusedError(10061, 'Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente', None, 10061...
+  File "C:\Users\pecas\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\websocket\_http.py", line 210, in _open_socket
+    sock.connect(address)
+    │    │       └ ('127.0.0.1', 443)
+    │    └ <method 'connect' of '_socket.socket' objects>
+    └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+
+ConnectionRefusedError: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+2026-08-02 22:21:43.123 | INFO     | app.infrastructure.websocket.client:_run:105 - Reconnecting in 30.0s

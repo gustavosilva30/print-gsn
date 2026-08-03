@@ -19,7 +19,7 @@ class SettingsWindow:
         self._settings = settings or SettingsCls()
         self.root = tk.Tk()
         self.root.title("GSN Print Service — Configurações")
-        self.root.geometry("480x420")
+        self.root.geometry("520x560")
         self.root.resizable(False, False)
 
         self._vars: dict[str, tk.StringVar] = {
@@ -32,6 +32,9 @@ class SettingsWindow:
             "command_language": tk.StringVar(value=getattr(self._settings, "command_language", "PPLB")),
             "argox_model": tk.StringVar(value=getattr(self._settings, "argox_model", "OS-214 Plus")),
             "mock_mode": tk.StringVar(value="true" if self._settings.mock_mode else "false"),
+            "websocket_enabled": tk.StringVar(value="true" if getattr(self._settings, "websocket_enabled", False) else "false"),
+            "local_http_enabled": tk.StringVar(value="true" if getattr(self._settings, "local_http_enabled", True) else "false"),
+            "local_http_port": tk.StringVar(value=str(getattr(self._settings, "local_http_port", 5555))),
         }
         self._build_form()
 
@@ -49,6 +52,9 @@ class SettingsWindow:
             ("Linguagem (PPLB/PPLA)", "command_language"),
             ("Modelo Argox", "argox_model"),
             ("Mock mode (true/false)", "mock_mode"),
+            ("WebSocket ligado (true/false)", "websocket_enabled"),
+            ("HTTP local ligado (true/false)", "local_http_enabled"),
+            ("Porta HTTP local", "local_http_port"),
         ]
         for index, (label, key) in enumerate(rows):
             ttk.Label(frame, text=label).grid(row=index, column=0, sticky=tk.W, pady=4)
@@ -79,6 +85,12 @@ class SettingsWindow:
         data["command_language"] = self._vars["command_language"].get().strip() or "PPLB"
         data["argox_model"] = self._vars["argox_model"].get().strip() or "OS-214 Plus"
         data["mock_mode"] = self._vars["mock_mode"].get().strip().lower() == "true"
+        data["websocket_enabled"] = self._vars["websocket_enabled"].get().strip().lower() == "true"
+        data["local_http_enabled"] = self._vars["local_http_enabled"].get().strip().lower() == "true"
+        try:
+            data["local_http_port"] = int(self._vars["local_http_port"].get().strip() or "5555")
+        except ValueError:
+            data["local_http_port"] = 5555
 
         config_path.parent.mkdir(parents=True, exist_ok=True)
         with config_path.open("w", encoding="utf-8") as handle:
@@ -95,8 +107,12 @@ class SettingsWindow:
         self._settings.command_language = str(data["command_language"])
         self._settings.argox_model = str(data["argox_model"])
         self._settings.mock_mode = bool(data["mock_mode"])
+        self._settings.websocket_enabled = bool(data["websocket_enabled"])
+        self._settings.local_http_enabled = bool(data["local_http_enabled"])
+        self._settings.local_http_port = int(data["local_http_port"])
 
         messagebox.showinfo(
             "Configurações",
-            "Configuração salva.\nReinicie o serviço para aplicar URL/token do WebSocket.",
+            "Configuração salva.\nReinicie o programa/serviço para aplicar todas as mudanças.\n"
+            "Use o menu da bandeja: Guia de configuração.",
         )

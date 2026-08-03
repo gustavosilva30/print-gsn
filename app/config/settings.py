@@ -19,6 +19,7 @@ class Settings:
     connect_timeout_seconds: int = int(os.getenv("GSN_CONNECT_TIMEOUT", "5"))
     read_timeout_seconds: int = int(os.getenv("GSN_READ_TIMEOUT", "2"))
     auto_reconnect: bool = os.getenv("GSN_AUTO_RECONNECT", "true").lower() == "true"
+    websocket_enabled: bool = os.getenv("GSN_WEBSOCKET_ENABLED", "false").lower() == "true"
     reconnect_initial_delay_seconds: int = int(os.getenv("GSN_RECONNECT_INITIAL_DELAY", "1"))
     reconnect_max_delay_seconds: int = int(os.getenv("GSN_RECONNECT_MAX_DELAY", "30"))
     reconnect_multiplier: float = float(os.getenv("GSN_RECONNECT_MULTIPLIER", "2.0"))
@@ -71,6 +72,7 @@ class Settings:
             self.connect_timeout_seconds = int(data.get("connect_timeout_seconds", self.connect_timeout_seconds))
             self.read_timeout_seconds = int(data.get("read_timeout_seconds", self.read_timeout_seconds))
             self.auto_reconnect = self._as_bool(data.get("auto_reconnect", self.auto_reconnect))
+            self.websocket_enabled = self._as_bool(data.get("websocket_enabled", self.websocket_enabled))
             self.reconnect_initial_delay_seconds = int(
                 data.get("reconnect_initial_delay_seconds", self.reconnect_initial_delay_seconds)
             )
@@ -117,6 +119,7 @@ class Settings:
                 "connect_timeout_seconds": self.connect_timeout_seconds,
                 "read_timeout_seconds": self.read_timeout_seconds,
                 "auto_reconnect": self.auto_reconnect,
+                "websocket_enabled": self.websocket_enabled,
                 "reconnect_initial_delay_seconds": self.reconnect_initial_delay_seconds,
                 "reconnect_max_delay_seconds": self.reconnect_max_delay_seconds,
                 "reconnect_multiplier": self.reconnect_multiplier,

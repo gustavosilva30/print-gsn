@@ -127,7 +127,19 @@ class ApplicationContainer:
         self._registry.register_instance(WebSocketClient, websocket_client)
 
         print_service.start()
-        websocket_client.connect()
+
+        if getattr(self._settings, "websocket_enabled", False) and str(
+            getattr(self._settings, "server_url", "") or ""
+        ).strip():
+            websocket_client.connect()
+        else:
+            from loguru import logger
+
+            logger.info(
+                "WebSocket desligado (websocket_enabled=false). "
+                "Modo local HTTP ativo na porta {port}.",
+                port=getattr(self._settings, "local_http_port", 5555),
+            )
 
         local_http = None
         if getattr(self._settings, "local_http_enabled", True):
