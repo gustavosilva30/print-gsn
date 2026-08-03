@@ -99,6 +99,17 @@ class SystemTray:
 
         threading.Thread(target=worker, daemon=True, name="tray-print-test").start()
 
+    def _open_guide(self, icon=None, item=None) -> None:
+        def worker() -> None:
+            try:
+                from app.ui.windows.guide_window import GuideWindow
+                GuideWindow().show()
+            except Exception as exc:
+                logger.exception("Failed to open guide: {exc}", exc=exc)
+                self._notify("Guia", f"Não foi possível abrir: {exc}")
+
+        threading.Thread(target=worker, daemon=True, name="tray-guide").start()
+
     def _open_settings(self, icon: Any | None = None, item: Any | None = None) -> None:
         def worker() -> None:
             try:
